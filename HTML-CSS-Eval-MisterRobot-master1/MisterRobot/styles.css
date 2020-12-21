@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.mcontainer {
+    height: 100vh;
+    background-color: black;
+}
+
+.bghead {
+    width: 100%;
+    background-color: lightgrey;
+    height: 21%;
+}
+
+.bgneck {
+    width: 100%;
+    background-color: rgb(168, 168, 168);
+    height: 3%;
+}
+
+.bgtorso {
+    width: 100%;
+    background-color: rgb(136, 136, 136);
+    height: 41%;
+}
+
+.bglegs {
+    width: 100%;
+    background-color: rgb(65, 65, 65);
+    height: 35%;
+}
+
+#rhead {
+    width: 15%;
+    height: 100%;
+    background-color: azure;
+    margin: auto;
+}
+
+.eye1 {
+    position: absolute;
+    background-color: limegreen;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: 3%;
+    margin-left: 4%;
+}
+
+.eye2 {
+    position: absolute;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: 3%;
+    margin-left: 9.3%;
+}
+
+.mouth {
+    position: absolute;
+    background-color:rgb(45, 51, 54);
+    width: 6%;
+    height: 1%;
+    margin-left: 4.5%;
+    margin-right: 4.5%;
+    margin-top: 8%;
+}
+
+.threat {
+    font-size: 0.1rem;
+    color: red;
+    opacity: 0.4;
+    text-align: center;
+}
+
+#neck {
+    background-color: azure;
+    margin: auto;
+    width: 4%;
+    height: 100%;
+}
+
+#torso {
+    position: absolute;
+    background-color: azure;
+    width: 20%;
+    height: 41%;
+    margin-left: 40%;
+}
+
+#larm {
+    position: absolute;
+    background-color: azure;
+    width: 5%;
+    height: 41%;
+    margin-left: 34.5%;
+    animation: lwaving 4s 2s ease-in-out infinite;
+    transform-origin: 70px 35px;
+}
+
+.zone {
+    transition-delay: 1s;
+}
+
+#rarm {
+    position: absolute;
+    background-color: azure;
+    width: 5%;
+    height: 41%;
+    margin-left: 60.5%;
+    animation: rwaving 4s 4s ease-in-out infinite;
+    transform-origin: 15px 35px;
+}
+
+#lleg {
+    position: absolute;
+    background-color: rgb(214, 238, 238);
+    width: 8%;
+    height: 32%;
+    margin-left: 41%;
+}
+
+#rleg {
+    position: absolute;
+    background-color:rgb(214, 238, 238);
+    width: 8%;
+    height: 32%;
+    margin-left: 51%;
+}
+
+#lfoot {
+    position: absolute;
+    background-color:rgb(208, 236, 236);
+    width: 8%;
+    height: 2%;
+    margin-left: 41%;
+    margin-top: 17.2%;
+}
+
+#rfoot {
+    position: absolute;
+    background-color: rgb(208, 236, 236);
+    width: 8%;
+    height: 2%;
+    margin-left: 51%;
+    margin-top: 17.2%;
+}
+
+@keyframes lwaving {
+    0% {
+        transform: rotate(0deg) translate(0px);
+      }
+      20% {
+          transform: rotate(55deg) translate(-5px);
+        }
+      35% {
+          transform: rotate(90deg) translate(-10px);
+      }
+      50% {
+        transform: rotate(130deg) translate(-20px);
+      }
+      65% {
+          transform: rotate(90deg) translate(-10px);
+      }
+      80% {
+          transform: rotate(55deg) translate(-5px);
+        }
+      100% {
+        transform: rotate(0deg) translate(0px);
+      }
+  }
+
+  @keyframes rwaving {
+    0% {
+      transform: rotate(0deg) translate(0px);
+    }
+    20% {
+        transform: rotate(-55deg) translate(5px);
+      }
+    35% {
+        transform: rotate(-90deg) translate(10px);
+    }
+    50% {
+      transform: rotate(-130deg) translate(20px);
+    }
+    65% {
+        transform: rotate(-90deg) translate(10px);
+    }
+    80% {
+        transform: rotate(-55deg) translate(5px);
+      }
+    100% {
+      transform: rotate(0deg) translate(0px);
+    }
+  }
+
+  

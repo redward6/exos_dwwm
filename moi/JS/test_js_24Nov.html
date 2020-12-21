@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Hellooo</div>
+
+
+    <script>
+        let bod = document.body;
+        let div1 = document.getElementsByTagName("div")[0];
+        let newP = document.createElement("p");
+
+        console.dir(div1); // permet d'outrepasser si console.log ne marche pas (essayer console.group aussi)
+        
+
+        newP.textContent = "j\'ai ajouté un paragraphe";
+        bod.appendChild(newP);
+        bod.insertBefore(newP, div1); 
+
+
+
+
+        /* document.getElementsByTagName("div")[0].style.color = "green";
+         document.getElementsByTagName("div")[0].style.textAlign = "center";
+         document.getElementsByTagName("div")[0].style.fontSize = "3em"; */
+
+        div1.style.fontSize = "3em";
+        div1.style.textAlign = "center";
+        div1.style.color = "pink";
+
+
+        /*        function addElement() {
+                    // create a new div element 
+                    const newDiv = document.createElement("p");
+        
+                    // and give it some content 
+                    const newContent = document.createTextNode("Hi there and greetings!");
+        
+                    // add the text node to the newly created div
+                    newDiv.appendChild(newContent);
+        
+                    // add the newly created element and its content into the DOM 
+                    const currentDiv = document.getElementsByTagName("div")[0];
+                    document.body.insertBefore(newDiv, currentDiv);
+                }
+        
+        */
+        /*
+                function swap_content() {
+                    let tmp = document.getElementsByTagName("div")[0].value;
+                    document.getElementsByTagName("div")[0].value = document.getElementsByTagName("p")[0].value;
+                    document.getElementsByTagName("p")[0].value = tmp;
+                }
+        
+               let tempo = "bonjour";
+                tempo.textContent = div1.textContent;
+                document.textContent(div1) = newDiv.textContent;
+                newDiv.textContent = document.textContent(div1);
+        
+                */
+
+
+        let nabil = "Nabil";
+        let kheira = "Kheira";
+
+
+        document.write('<br>');
+        document.write(nabil + ' Lalala ' + kheira);
+
+        /*       function swapText(txt1, txt2) {
+                   tempo = txt1;
+                   txt1 = txt2;
+                   txt2 = tempo;
+               } */
+
+        let temp = nabil;
+        nabil = kheira;
+        kheira = temp;
+
+        document.write('<br>');
+        document.write(nabil + ' Lalala ' + kheira);
+
+
+        let p1 = document.getElementsByTagName("div")[0];
+        let p2 = document.getElementsByTagName("p")[0];
+        p1.addEventListener("click", swap);
+        p2.addEventListener("click", swap);
+
+        function swap() {
+            // save p1 text in temp var
+            let temp = p1.textContent;
+
+            // Get p2 text and overwrite the p1 text
+            p1.textContent = p2.textContent;
+
+            // Take the p1 text that was saved and put it in p2
+            p2.textContent = temp;
+        }
+
+        swap();
+
+
+        
+        let txt1 = "lalala"
+        let txt2 = "Romain"
+
+        function createDiv(txt) {
+           let madiv = document.createElement("div"); 
+           madiv.textContent(txt);
+
+        }
+
+        createDiv(txt1); // lalala
+        createDiv(txt2); // Romain
+        
+        createDiv("Test 1 2 3");
+
+
+
+    </script>
+</body>
+
+</html>
